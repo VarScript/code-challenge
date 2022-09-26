@@ -1,14 +1,13 @@
 /*
- * Reto #1
- * ¿ES UN ANAGRAMA?
- * Fecha publicación enunciado: 03/01/22
- * Fecha publicación resolución: 10/01/22
- * Dificultad: MEDIA
+ * Reto #2
+ * LA SUCESIÓN DE FIBONACCI
+ * Fecha publicación enunciado: 10/01/22
+ * Fecha publicación resolución: 17/01/22
+ * Dificultad: DIFÍCIL
  *
- * Enunciado: Escribe una función que reciba dos palabras (String) y retorne verdadero o falso (Boolean) según sean o no anagramas.
- * Un Anagrama consiste en formar una palabra reordenando TODAS las letras de otra palabra inicial.
- * NO hace falta comprobar que ambas palabras existan.
- * Dos palabras exactamente iguales no son anagrama.
+ * Enunciado: Escribe un programa que imprima los 50 primeros números de la sucesión de Fibonacci empezando en 0.
+ * La serie Fibonacci se compone por una sucesión de números en la que el siguiente siempre es la suma de los dos anteriores.
+ * 0, 1, 1, 2, 3, 5, 8, 13...
  *
  * Información adicional:
  * - Usa el canal de nuestro discord (https://mouredev.com/discord) "🔁reto-semanal" para preguntas, dudas o prestar ayuda a la acomunidad.
@@ -18,29 +17,13 @@
  *
  */
 
+const fb = [0,1];
 
+fb.forEach(n => console.log(`${n}
+`));
 
-const anagram = (w1, w2) => {
-    
-    // Words in lowe case
-    w1 = w1.toLowerCase();
-    w2 = w2.toLowerCase();
-
-
-     // Words in string
-    w1 = w1.split('');
-    w2 = w2.split('');
-
-      // Organizate words
-    w1 = w1.sort();
-    w2 = w2.sort();
-    
-      // Convert in  string
-    w1 = w1.join('');
-    w2 = w2.join('');
-
-    if (w1 === w2) return 'Is Anagram' 
-    else return 'Is not Anamgram'
+for (let i = 2; i < 10; i++) {
+    fb.push(fb[i - 1] + fb[i -2]);
+    console.log(`${fb[i]}
+    `);
 }
-
-console.log(anagram('rOma', 'omAr'));
