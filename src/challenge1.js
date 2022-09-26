@@ -26,4 +26,4 @@ for (let i = 2; i < 10; i++) {
     fb.push(fb[i - 1] + fb[i -2]);
     console.log(`${fb[i]}
     `);
-}
+};
