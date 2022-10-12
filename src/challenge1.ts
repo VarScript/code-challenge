@@ -17,7 +17,7 @@
  *
  */
 
-const fb = [0,1];
+let fb:number[] = [0,1];
 
 fb.forEach(n => console.log(`${n}
 `));
